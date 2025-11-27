@@ -1,0 +1,34 @@
+{
+  "name": "FamilyMessage",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da mensagem"
+    },
+    "content": {
+      "type": "string",
+      "description": "Conte\u00fado da mensagem"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "dica",
+        "comunicado",
+        "tutorial",
+        "evento"
+      ],
+      "description": "Tipo de mensagem"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se a mensagem foi lida"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "type"
+  ]
+}
